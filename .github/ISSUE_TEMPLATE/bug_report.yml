@@ -1,0 +1,31 @@
+name: Bug report
+description: Something is broken or behaving unexpectedly
+labels: ["bug"]
+body:
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Describe the problem and what you expected instead.
+    validations:
+      required: true
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      options:
+        - low
+        - medium
+        - high
+    validations:
+      required: false
+  - type: input
+    id: page
+    attributes:
+      label: Where did it happen? (page path)
+      placeholder: "/chat"
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Browser, app version, anything else useful.
